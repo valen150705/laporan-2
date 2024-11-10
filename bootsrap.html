@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Teori</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body.rapi {
+            background-color: #f0f4f8;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h3 {
+            color: #2980b9;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+        }
+        h3:hover {
+            color: #1abc9c;
+        }
+        .content li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1abc9c;
+        }
+
+        
+        body.berantakan {
+            background-color: #5047ff;
+            color: #000000;
+            font-family: 'Comic Sans MS', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .berantakan h1, .berantakan h2 {
+            color: #6214ff;
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+        .berantakan h3 {
+            color: #0040ff;
+            font-weight: bold;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px #8b0000;
+            transition: color 0.3s ease;
+        }
+        .berantakan h3:hover {
+            color: #1e24d2;
+        }
+        .berantakan .content li  {
+            font-size: 1.3rem;
+            color: #000000;
+            text-shadow: 1px 1px #000;
+            margin-bottom: 12px;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none") {
+                if (confirm("Apakah Anda ingin menampilkan konten bagian ini?")) {
+                    content.style.display = "block";
+                }
+            } else {
+                if (confirm("Apakah Anda ingin menyembunyikan konten bagian ini?")) {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        function toggleMode() {
+            const body = document.body;
+            if (body.classList.contains('rapi')) {
+                body.classList.remove('rapi');
+                body.classList.add('berantakan');
+            } else {
+                body.classList.remove('berantakan');
+                body.classList.add('rapi');
+            }
+        }
+    </script>
+</head>
+<body class="rapi">
+
+<div class="container my-5">
+    
+    <div class="d-flex justify-content-end">
+        <button onclick="toggleMode()" class="btn btn-secondary mb-3">Ganti Mode Tampilan</button>
+    </div>
+    
+    
+    <h1 class="text-center">LAPORAN TEORI</h1>
+    <h2 class="text-center">Valen Fathullah Gafansyah | 202331190</h2>
+    
+
+    <div class="mt-4">
+        <h3 onclick="toggleContent('section1')" class="text-primary">1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</h3>
+        <div id="section1" class="content">
+            <li>CSS meringankan beban pembaruan elemen satu per satu ini dan membuatnya sehingga dapat menerapkan satu  gaya tunggal di satu atau beberapa  elemen.Kita  dapat  menerapkan  beberapa  gaya  ke  elemen  yang  sama,  dan  kita dapat  menargetkan  gaya  tertentu  hingga  ke  elemen  individual.  Misalnya, jika  ingin  semua judul  menjadi font  tebal tetapi  judul  tertentu  harus miring,kita dapat melakukannya  dengan CSS.  Gunakan  CSS  untuk  membuat  perubahan  pada layout,  tampilan,  dan  nuansa  halaman web. CSS mempermudah pengelolaan perubahan ini</li>
+            <li>Javascript merupakan bahasa pemrograman web yang berjalan disisi <i>Client/Browser</i>. Javascript biasa digunakan untuk memanipulasi elementelement HTML dan menambahkan Style secara otomatis atau lebih sederhananya membuat dokumen HTML menjadi lebih Interaktif.</li>
+        </div>
+
+        <h3 onclick="toggleContent('section2')" class="text-primary">2. Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web?</h3>
+        <div id="section2" class="content">
+            <li>Menggunakan CSS <i>(Cascading Style Sheets)</i>,CSS dapat menerapkan gaya ke halaman web agar terlihat seperti apa yang kita inginkan. Ini berfungsi karena CSS terhubung ke DOM <i>(Document Object Model)</i>. Dengan CSS dan integrasinya dengan DOM, kita dapat dengan cepat dan mudah menata ulang elemen apa pun. Misalnya, jika kita tidak menyukai tampilan default <i>h1</i> dan <i>h2</i> dan tag heading lainnya, kita dapat menetapkan gaya baru untuk mengesampingkan pengaturan default untuk jenis dan ukuran font yang digunakan, atau apakah huruf tebal atau miring harus diatur, dan banyak lagi properti lainnya</li>
+            <li>Untuk dapat memulai dan menjalankan program JavaScript, ada dua perangkat lunak yang diperlukan yaitu browser dan teks editor. Teks editor adalah sebuah pengolah kata yang menghasilkan file dalam format <i>ASCII murni</i></li>
+        </div>
+
+        
+        <h3 onclick="toggleContent('section3')" class="text-primary">3. Jelaskan apa saja keuntungan menggunakan JavaScipt dan CSS?</h3>
+        <div id="section3" class="content">
+            <li>JavaScript merupakan sebuah bahasa pemrograman tingkat tinggi yang saat ini sudah menjadi bahasa pemrograman utama bagi web developer di samping HTML <i>(HyperText Markup Language)</i> dan CSS <i>(Cascading Style Sheet)</i>. JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif.</li>
+            <li>CSS (Cascading Style Sheet) merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. Dengan CSS, kita dapat mengatur jenis font, warna tulisan, dan latar belakang halaman. dengan menggukanakan css ini kita menentukan tampilan format website kita. dengan menggukan css akan mempermuadah loading halaman web, memudahkan pengolahan kode, menawarkan lebih banyak variasi tampilan.membuat website lebih rapi disemua ukuran</li>
+        </div>
+
+        
+        <h3 onclick="toggleContent('section4')" class="text-primary">4. Jelaskan apa saja keuntungan menggunakan Bootstrap?</h3>
+        <div id="section4" class="content">
+            <li> Digunakan, Siapa saja yang memiliki pengetahuan dasar tentang HTML dan CSS dapat memulai pengembangan dengan bootstrap.b.Kompatibel pada Semua Browser, Bootstrap dibuat dengan browser modern dan kompatibel.c.Open Source.d.Lebih efesien Waktu, Pihak developer tidak perlu membuat waktu untuk menulis berbagai script SCC dari awal.e.Lebih Fleksibel, Penggunaan Bootstrap membuat pekerjaan developer dan programmer bisa lebih fleksibel.e.Desain yang oriented.f.Less is more.g.JavaScript.h.Dokumentasi yang lengkap</li>
+        </div>
+
+        
+        <h3 onclick="toggleContent('section5')" class="text-primary">5. Berikan salah satu contoh penggunaan Bootstrap lalu jelaskan apa fungsinya serta berikan screenshot hasil running di web-nya!</h3>
+        <div id="section5" class="content">
+            <li>Bootstrap adalah framework front-end yang membantu membuat halaman web responsif dan konsisten di berbagai ukuran layar, seperti ponsel, tablet, dan desktop, dengan sistem grid yang otomatis menyesuaikan tata letak. Framework ini menyediakan komponen siap pakai seperti tombol, kartu, dan form, yang menjaga keseragaman desain di seluruh halaman tanpa perlu menulis CSS khusus untuk setiap elemen. Selain itu, Bootstrap menawarkan komponen interaktif seperti modal, carousel, dan tooltip untuk meningkatkan interaktivitas tanpa perlu menulis banyak kode JavaScript. Dengan adanya utility classes seperti text-center atau bg-light, Bootstrap memudahkan kustomisasi cepat pada elemen-elemen tampilan. Kompatibilitasnya dengan berbagai browser modern juga memastikan tampilan yang konsisten di berbagai platform. Semua fitur ini menjadikan pengembangan web lebih cepat dan efisien, sehingga developer dapat fokus pada konten dan fungsionalitas</li>
+            <img src="Screenshot 2024-11-10 213240.png" alt="" height="500px" width="500px" > 
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
